@@ -12,6 +12,7 @@ $(function(){
       }
     });
   });
+  
   //  create a keypress method for the enter key
   $("#inputZip.form-control").keypress(function(event) {
     let key = event.keyCode;
