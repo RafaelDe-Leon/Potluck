@@ -1,0 +1,32 @@
+body {
+    background-color: lightgrey;
+
+}
+
+.heading {
+    background-color: darkgrey;
+    padding: 10px;
+}
+
+.columns-margin-control {
+    margin-top: 60px;
+}
+
+/* visuals */
+#right-column {
+    /* border: solid black 1px; */
+    /* margin-left: 4%; */
+}
+
+#left-column {
+    border: 1px solid black;
+    /* margin-right: 2%; */
+}
+
+
+/* controls visual size of the map */
+#map {
+    height: 700px;
+    width: 100%;
+    border: 1px solid black;
+}

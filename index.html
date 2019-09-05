@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Place Holder</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="text-center heading">
+        <h1>Place Holder</h1>
+    </header>
+
+    <div class="container">
+        <!-- second row that controls the flow of the page -->
+        <div class="row columns-margin-control">
+            <!-- left column -->
+            <div class="col-3" id="left-column">
+                <div class="row">
+                    <p>Test</p>
+                </div>
+
+            </div>
+            <!-- right column -->
+            <div class="col-9" id="right-column">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+
+    <!-- map API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0&callback=initMap"
+        async defer></script>
+
+    <!-- app js file link -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
