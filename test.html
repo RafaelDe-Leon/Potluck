@@ -10,13 +10,24 @@
     <title>News and Twitter API Testing</title>
 </head>
 <body>
-    <div>
-        <form>
+    <div class="form-group">
+        
             <label for="restaurantName">Restaurant Name</label>
                 <input class="form-control" id="restaurantName" type="text">
-                <button class="btn btn-primary" id="submit-name" type="submit">Submit</button>
-        </form>
+                
+        
     </div>
+    <div class="form-group">
+        <label for="pwd">Number of Records to Retrieve:</label>
+        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+          <option selected value="1">1</option>
+          <!-- Setting the option for 5 as default -->
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" id="submit-name" type="submit">Submit</button>
+
 
     <script src=script.js></script>
 </body>
