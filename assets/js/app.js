@@ -1,31 +1,25 @@
-// Firebase for Apps
-// Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyDZ14hkAIfRW7aJMS61i1gUBBsausAImfw",
-  authDomain: "restaurant-hype.firebaseapp.com",
-  databaseURL: "https://restaurant-hype.firebaseio.com",
-  projectId: "restaurant-hype",
-  storageBucket: "",
-  messagingSenderId: "328234147973",
-  appId: "1:328234147973:web:8006c605ff9b7eadb409ec"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-//global variable to hold map
-let map;
-let mapApiKey = AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0;
-let mapUrl =
-  "https://maps.googleapis.com/maps/api/js?key=" +
-  mapApiKey +
-  "&callback=initMap";
-
-console.log(mapUrl);
-
-// function that ingnites the map
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8
+$(function(){
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
   });
-}
+
+  $(window).resize(function(e) {
+    if($(window).width()<=768){
+      $("#wrapper").removeClass("toggled");
+    }else{
+      $("#wrapper").addClass("toggled");
+    }
+  });
+});
+
+//  create a keypress method for the enter key
+$("#inputZip.form-control").keypress(function(event) {
+  let key = event.keyCode;
+    if(key === 13) {
+      console.log("ENTER");
+    }
+  })
+  // create an ajax setup for an api
+  let key = "69e9f092ab51bf6c870b9892ace15ab6";
+  let url = 
