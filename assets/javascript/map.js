@@ -1,16 +1,16 @@
 // Firebase for Apps
 // Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyDZ14hkAIfRW7aJMS61i1gUBBsausAImfw",
-  authDomain: "restaurant-hype.firebaseapp.com",
-  databaseURL: "https://restaurant-hype.firebaseio.com",
-  projectId: "restaurant-hype",
-  storageBucket: "",
-  messagingSenderId: "328234147973",
-  appId: "1:328234147973:web:8006c605ff9b7eadb409ec"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// var firebaseConfig = {
+//   apiKey: "AIzaSyDZ14hkAIfRW7aJMS61i1gUBBsausAImfw",
+//   authDomain: "restaurant-hype.firebaseapp.com",
+//   databaseURL: "https://restaurant-hype.firebaseio.com",
+//   projectId: "restaurant-hype",
+//   storageBucket: "",
+//   messagingSenderId: "328234147973",
+//   appId: "1:328234147973:web:8006c605ff9b7eadb409ec"
+// };
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
 
 //global variable to hold map
 let map;
@@ -21,6 +21,14 @@ let mapUrl =
   "&callback=initMap";
 
 console.log(mapUrl);
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function(response) {
+
+  
+});
 
 // function that ingnites the map
 function initMap() {
