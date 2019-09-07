@@ -10,3 +10,18 @@ body {
 .margin-control {
     margin: 50px auto;
 }
+
+.margin-control-zip {
+    margin-top: 50px;
+}
+.color-main {
+    color: blue;
+}
+
+.main-color-yellow {
+    color: yellow;
+}
+
+.bar-control {
+    width: 350px;
+}
