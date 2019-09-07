@@ -7,26 +7,6 @@ body {
     background-size: cover;
 }
 
-dd {
-    margin-right: 0;
-}
-
-figure {
-    margin: 0 0 1rem;
-}
-
-caption {
-    text-align: right;
-}
-
-th {
-    text-align: right;
-}
-
-.list-unstyled {
-    padding-right: 0;
-}
-
-.list-inline {
-    padding-right: 0;
+.margin-control {
+    margin: 50px auto;
 }
