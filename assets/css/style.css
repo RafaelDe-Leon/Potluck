@@ -26,14 +26,26 @@ body {
     margin-top: 50px;
 }
 
+/* main search bar CSS */
+
 #main-search-area {
-    background-color:rgba(85, 85, 85, 0.671);
+    background-color: rgba(190, 190, 190, 0.829);
     margin-top: 100px;
-    
 }
 
 .color-main {
     color: blue;
+}
+
+/* column one added CSS */
+
+.column-one {
+    margin-top: 100px;
+    margin-left: 20px;
+    text-align: left;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(190, 190, 190, 0.829);
 }
 
 /* main top h tags style */
