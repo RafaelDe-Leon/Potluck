@@ -1,19 +1,23 @@
 body {
-    direction: rtl;
-    text-align:right;
+    text-align: right;
     background-image: url("../images/potLuck2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+#potluck-control {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
 
-
-ul {
-    float: left;
+.nav-margin {
+    margin-left: 75%;
 }
 
 /* controls margin of the page */
+
 .margin-control {
     margin: 50px auto;
 }
@@ -21,11 +25,19 @@ ul {
 .margin-control-zip {
     margin-top: 50px;
 }
+
+#main-search-area {
+    background-color:rgba(85, 85, 85, 0.671);
+    margin-top: 100px;
+    
+}
+
 .color-main {
     color: blue;
 }
 
 /* main top h tags style */
+
 .main-color-yellow {
     color: yellow;
 }
