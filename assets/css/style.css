@@ -7,6 +7,13 @@ body {
     background-size: cover;
 }
 
+
+
+ul {
+    float: left;
+}
+
+/* controls margin of the page */
 .margin-control {
     margin: 50px auto;
 }
@@ -18,6 +25,7 @@ body {
     color: blue;
 }
 
+/* main top h tags style */
 .main-color-yellow {
     color: yellow;
 }
