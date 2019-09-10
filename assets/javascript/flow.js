@@ -10,14 +10,12 @@ input.addEventListener("keydown", function(event) {
     // Trigger the button element with a click
     document.getElementById("inputZip").click();
     console.log("i have been pressed");
+    $("#imageAreaTwo").addClass("area-two");
     $("#column-one").addClass("column-one");
     idPressed.append("<div class='row'>");
-    idPressed.append("<div class='col-md-3'");
-    idPressed.append("<h1> Test </h1>");
-
-   
+    idPressed.append("<div class='col-md-4'");
+    idPressed.append("<ul> Test </ul>");
 
 
-   
   }
 });

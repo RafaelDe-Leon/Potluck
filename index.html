@@ -16,71 +16,85 @@
 </head>
 
 <body>
-  <!-- start of Nav bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" id="potluck-control" href="#">Potluck</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div class="image-one">
+
+    <!-- start of Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" id="potluck-control" href="#">Potluck</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="nav navbar-nav nav-margin">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-
-
-  <!-- container holding the entire website  -->
-  <div class="container">
-    <section id="main-search-area">
-      <div class="row">
-        <h2 class="text-center margin-control color-main">Let's Start in Your <span
-            class="main-color-yellow">Neighborhood</span></h2>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav nav-margin">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
       </div>
-
-      <div class="row">
-
-        <div class="margin-control col-md-12 text-center">
+    </nav>
 
 
-          <!-- main entry point to our app -->
-          <input type="text" class="text-center bar-control" id="inputZip" placeholder="Enter Zipcode"
-            aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
-          </input>
+    <!-- container holding the entire website  -->
+    <div class="container">
+      <section id="main-search-area">
+        <div class="row">
+          <h2 class="text-center margin-control color-main">Let's Start in Your <span
+              class="main-color-yellow">Neighborhood</span></h2>
         </div>
+
+        <div class="row">
+
+          <div class="margin-control col-md-12 text-center">
+
+
+            <!-- main entry point to our app -->
+            <input type="text" class="text-center bar-control" id="inputZip" placeholder="Enter Zipcode"
+              aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
+            </input>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <section id="imageAreaTwo">
+    <!-- column to be added the first information -->
+    <div id="column-one">
+      <!-- restaurant API -->
+      <div id="restaurant">
+
       </div>
-    </section>
-
-  </div>
-
-<!-- column to be added the first information -->
-  <div id="column-one">
-    <!-- restaurant API -->
-    <div id="restaurant">
-
-    </div>
-  </div>
-
-  </div>
-  <div class="row">
-    <div id="map" class="col-md-6">
     </div>
 
+    </div>
+    <div class="row">
+      <div id="map" class="col-md-6">
+      </div>
 
-  </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- footer of the page -->
+  <footer class="footer">
+    <div class="container">
+      <h3>Footer</h3>
+    </div>
+
+  </footer>
 
 
 
