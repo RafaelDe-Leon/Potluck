@@ -1,11 +1,40 @@
 body {
-    direction: rtl;
-    text-align:right;
+    background-color: rgba(230, 227, 227);
+    background-size: cover;
+}
+
+/* Main image for the zipcode area */
+
+.image-one {
     background-image: url("../images/potLuck2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    padding-bottom: 300px;
+    padding-top: 100px;
 }
+
+.fixed-top {
+    background-color: rgba(61, 61, 61, 0.658);
+}
+
+.area-two {
+    background-color: rgba(230, 227, 227);
+    margin-top: 25px;
+    border-bottom: 1px solid rgba(128, 127, 127, 0.692);
+}
+
+#potluck-control {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.nav-margin {
+    margin-left: 75%;
+}
+
+/* controls margin of the page */
 
 .margin-control {
     margin: 50px auto;
@@ -14,9 +43,82 @@ body {
 .margin-control-zip {
     margin-top: 50px;
 }
+
+/* main search bar CSS */
+
+#main-search-area {
+    background-color: rgba(190, 190, 190, 0.829);
+    margin-top: 200px;
+}
+
 .color-main {
     color: blue;
 }
+
+/* column one added CSS */
+
+.column-one {
+    overflow: auto;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    text-align: left;
+    width: 500px;
+    height: 800px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    box-shadow: 5px 10px 6px #a0a0a0;
+}
+
+.column-header {
+    margin-left: 40px;
+    margin-top: 20px;
+    /* text-decoration: underline; */
+}
+
+#restaurant li {
+    font-size: 16px;
+    margin-left: 10px;
+    position: relative;
+}
+
+/* list css control */
+
+.title-style {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.paragraph-style {
+    display: inline-block;
+    margin-top: 5px;
+    width: 320px;
+}
+
+.news-button {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 350px;
+}
+
+/* Map Style */
+
+#map {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.map-container {
+    margin-left: 300px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 600px;
+}
+
+/* main top h tags style */
 
 .main-color-yellow {
     color: yellow;
@@ -24,11 +126,4 @@ body {
 
 .bar-control {
     width: 350px;
-}
-.restaurant-box {
-    visibility: hidden;
-
-}
-.toggled {
-    visibility: visible;
 }
