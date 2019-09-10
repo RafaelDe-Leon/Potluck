@@ -25,3 +25,10 @@ body {
 .bar-control {
     width: 350px;
 }
+.restaurant-box {
+    visibility: hidden;
+
+}
+.toggled {
+    visibility: visible;
+}
