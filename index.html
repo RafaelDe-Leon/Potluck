@@ -10,6 +10,19 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  
+
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    rel="stylesheet">
+
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="./Landing Page/scss/one-page-wonder.scss">
+
   <!-- Stylesheet CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -18,59 +31,136 @@
 </head>
 
 <body>
-  <header>
+  <div class="image-one">
 
     <!-- start of Nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Potluck</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Potluck</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Landing Page/index.html">About us</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Future Features</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-  </header>
 
 
-  <!-- container holding the entire website  -->
-  <div class="container">
-    <div class="row">
-      <h2 class="text-center margin-control color-main">Let's Start in Your <span class="main-color-yellow">Neighborhood</span></h2>
+    <!-- container holding the entire website  -->
+    <div class="container">
+      <section id="main-search-area">
+        <div class="row">
+          <h2 class="text-center margin-control color-main">Let's Start in Your <span
+              class="main-color-yellow">Neighborhood</span></h2>
+        </div>
+
+        <div class="row">
+
+          <div class="margin-control col-md-12 text-center">
+
+
+            <!-- main entry point to our app -->
+            <input type="text" class="text-center bar-control" id="inputZip" placeholder="Enter Zipcode"
+              aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
+            </input>
+          </div>
+        </div>
+      </section>
+
     </div>
-
-    <div class="row">
-
-      <div class="margin-control col-md-12 text-center">
-        
-        <input type="text" class="text-center bar-control" id="inputZip" placeholder="Enter Zipcode" aria-label="Enter Zipcode Here"
-          aria-describedby="basic-addon">
-        </input>
-      </div>
-    </div>
-
-    <div class="row">
-      <div id="map"></div>
-    </div>
-  
-  
 
   </div>
 
+  <section id="imageAreaTwo">
+    <!-- column to be added the first information -->
+    <div id="column-one">
+      <!-- restaurant API -->
+      <div id="restaurant">
+        <h2 class="column-header">Restaurant near you</h2>
+        <ul>
+          <li>
+            <!-- temporary code for styling only will delete when restaurant API is added -->
+            <h3 class="title-style">Title</h3>
+            <p class="paragraph-style">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi provident
+              iure laboriosam, alias
+              distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
+              maxime possimus est dicta quo.</p>
+            <button class="news-button"> News</button>
+          </li>
+          <li>
+            <!-- temporary code for styling only will delete when restaurant API is added -->
+            <h3 class="title-style">Title</h3>
+            <p class="paragraph-style">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi provident
+              iure laboriosam, alias
+              distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
+              maxime possimus est dicta quo.</p>
+            <button class="news-button"> News</button>
+
+          </li>
+          <li>
+            <!-- temporary code for styling only will delete when restaurant API is added -->
+            <h3 class="title-style">Title</h3>
+            <p class="paragraph-style">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi provident
+              iure laboriosam, alias
+              distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
+              maxime possimus est dicta quo.</p>
+            <button class="news-button"> News</button>
+
+          </li>
+
+          <!-- temporary code for styling only will delete when restaurant API is added -->
+
+        </ul>
+
+      </div>
+    </div>
+
+    </div>
+    <div class="row">
+      <div class="map-container">
+        <div id="map" class="col-md-6">
+        </div>
+      </div>
+
+
+    </div>
+
+=======
+
+
+  </section>
+
+
+  <!-- footer of the page -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h3>Footer</h3>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>Footer</h3>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>Footer</h3>
+        </div>
+      </div>
+    </div>
+
+  </footer>
 
 
 
@@ -85,11 +175,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-    
-    <!-- map API key -->
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0&callback=initMap"
-   async defer></script>
-    <script src="assets/javascript/script.js"></script>
+
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0&callback=initMap">
+    </script>
+
+
+  <script src="assets/javascript/flow.js"></script>
+  <script src="assets/javascript/script.js"></script>
   <script src="assets/javascript/restaurant.js"></script>
   <script src="assets/javascript/map.js"></script>
 </body>
