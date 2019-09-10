@@ -1,17 +1,29 @@
 $("#submit-name").on("click", function(event) {
   event.preventDefault();
+  // Create a panel to show news results
+  $('#response').append('<div></div>', {
+    addClass: 'panel panel-default',
+  });
+  $('response').append('<div></div>', {
+
+  })
+
+  
   // Get the input values
   var restaurantName = $("#restaurantName")
     .val()
     .trim();
-
+    var restaurantCity = $("#restaurantCity")
+    .val()
+    .trim();
   var url =
     "https://newsapi.org/v2/everything?" +
     "q=" +
-    restaurantName +
+    restaurantName + " " + restaurantCity +
     "&language=en&" +
     "sortBy=popularity&" +
     "apiKey=bfc8e374d6df45af85688db28a5bf373";
+
   console.log(url);
   // var req = new Request(url);
 
