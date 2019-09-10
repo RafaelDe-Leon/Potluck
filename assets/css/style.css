@@ -11,6 +11,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
     padding-bottom: 300px;
+    padding-top: 100px;
+}
+
+.fixed-top {
+    background-color: rgba(61, 61, 61, 0.658);
 }
 
 .area-two {
@@ -96,8 +101,6 @@ body {
     position: absolute;
     top: 40px;
     left: 350px;
-    
-
 }
 
 /* Map Style */
@@ -107,6 +110,7 @@ body {
     width: 100%;
     position: relative;
 }
+
 .map-container {
     margin-left: 300px;
     margin-bottom: 50px;
