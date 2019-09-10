@@ -1,6 +1,6 @@
 //global variable to hold map
 let map;
-let mapApiKey = AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0;
+let mapApiKey = "AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0";
 let mapUrl =
   "https://maps.googleapis.com/maps/api/js?key=" +
   mapApiKey +
@@ -19,15 +19,29 @@ let zipCodeConvert =
   zipcode +
   "/degrees";
 
-console.log(mapUrl);
 
-// function that ingnites the map
+  // function that ingnites the map
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 8
-  });
-}
+  }); 
+
+
+// when news-button is clicked
+
+// $(document.on("click", function() {
+
+// // ajax call
+//   $.ajax({
+//     url: zipCodeConvert,
+//     method: "GET"
+//   }).then(function(response){
+//     console.log(response.lat);
+//     });
+//   }));
+
+
 
 // zipcode to lang convert API
 
