@@ -27,20 +27,22 @@ function initMap() {
     zoom: 8
   }); 
 
-
+}
 // when news-button is clicked
 
-// $(document.on("click", function() {
+$(document).on("click", "news-button", function() {
 
-// // ajax call
-//   $.ajax({
-//     url: zipCodeConvert,
-//     method: "GET"
-//   }).then(function(response){
-//     console.log(response.lat);
-//     });
-//   }));
+  var newsButton = $(this).getElementById("news-button");
 
+
+// ajax call
+  $.ajax({
+    url: zipCodeConvert,
+    method: "GET"
+  }).then(function(response){
+    console.log(response.lat);
+    });
+  });
 
 
 // zipcode to lang convert API

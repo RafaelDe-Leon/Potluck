@@ -9,7 +9,7 @@ input.addEventListener("keydown", function(event) {
     event.preventDefault();
     // Trigger the button element with a click
     document.getElementById("inputZip").click();
-    console.log("i have been pressed");
+    console.log("Zipcode Input was pressed");
     $("#imageAreaTwo").addClass("area-two");
     $("#column-one").addClass("column-one");
     idPressed.append("<div class='row'>");
