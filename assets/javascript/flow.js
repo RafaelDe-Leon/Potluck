@@ -15,7 +15,6 @@ input.addEventListener("keydown", function(event) {
     idPressed.append("<div class='row'>");
     idPressed.append("<div class='col-md-4'");
     idPressed.append("<ul> Test </ul>");
-
-
   }
 });
+
