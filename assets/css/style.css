@@ -1,6 +1,13 @@
+html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
 body {
     background-color: rgba(230, 227, 227);
     background-size: cover;
+    
 }
 
 /* Main image for the zipcode area */
@@ -126,4 +133,8 @@ body {
 
 .bar-control {
     width: 350px;
+}
+
+.footer-style {
+background-color: black;
 }
