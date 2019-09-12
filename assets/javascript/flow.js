@@ -10,12 +10,6 @@ input.addEventListener("keydown", function(event) {
     event.preventDefault();
     // Trigger the button element with a click
     document.getElementById("inputZip").click();
-    console.log("Zipcode Input was pressed");
-    $("#imageAreaTwo").addClass("area-two");
-    $("#column-one").addClass("column-one");
-    idPressed.append("<div class='row'>");
-    idPressed.append("<div class='col-md-4'");
-    idPressed.append("<ul> Test </ul>");
   }
 });
 
