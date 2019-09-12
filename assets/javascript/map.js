@@ -58,6 +58,8 @@ $("#zipForm").submit(function(event) {
   $("#column-one").addClass("column-one");
   $("#third-section").addClass("third-section");
   $("#map-container").addClass("map-container");
+  $("#column-header").addClass("column-header");
+  $("#column-header").html("Trending Restaurants near you");
 
 
   // may need later for future code
@@ -90,10 +92,6 @@ $("#zipForm").submit(function(event) {
 //   console.log(event.target, "event.target");
 //   console.log(event.target.elements[0].value, "value");
 // };
-
-$(document).on("click", ".news-button", function() {
-  $("#map-container").html("<div id='map' class=`col-md-6`></div>");
-});
 
 // function that ignites the map
 function initMap(cord1 , cord2) {

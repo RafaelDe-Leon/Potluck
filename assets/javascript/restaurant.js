@@ -49,8 +49,10 @@ let letsEat = function () {
             // create a phone variable for restaurants
             let phone = "Phone: " + eateries.restaurants[k].restaurant.phone_numbers;
             // console.log(phone)
-            let listings = $("#listings");
+            let listings = $("#restaurant");
             listings.append("<h3>" + name + "</h3>" + "<p>" + address + "</p>" + "<p>" + phone + "</p>");
+            // listings.append("<button class='news-button>");
+          
 
           }
         })
