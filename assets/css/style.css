@@ -10,8 +10,9 @@ body {
 
 /* h2 style */
 
-h2 {
-    font-family: 'Cairo', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: Catamaran;
+    font-weight: 800;
 }
 
 /* Main image for the zipcode area */
@@ -48,7 +49,7 @@ h2 {
 /* controls margin of the page */
 
 .margin-control {
-    margin: 50px auto;
+    margin: 25px auto;
 }
 
 .margin-control-zip {
@@ -59,7 +60,8 @@ h2 {
 
 #main-search-area {
     background-color: rgba(190, 190, 190, 0.829);
-    margin-top: 200px;
+    margin-top: 100px;
+    padding: 100px;
 }
 
 .color-main {
@@ -131,6 +133,19 @@ h2 {
     width: 100%;
     height: 600px;
     /* border: 1px solid black; */
+}
+
+/* third section */
+
+.third-section {
+    background-image: url("../images/03.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* opacity: */
+    width: 100%;
+    height: 800px;
+    z-index: -1;
 }
 
 /* main top h tags style */

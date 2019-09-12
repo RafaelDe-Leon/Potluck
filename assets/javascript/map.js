@@ -56,6 +56,8 @@ $("#zipForm").submit(function(event) {
   // adds class to the IDs
   $("#imageAreaTwo").addClass("area-two");
   $("#column-one").addClass("column-one");
+  $("#third-section").addClass("third-section");
+  $("#map-container").addClass("map-container");
 
   // may need later for future code
   // idPressed.append("<div class='row'>");
@@ -96,7 +98,7 @@ $(document).on("click", ".news-button", function() {
 function initMap(cord1 , cord2) {
     map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: + cord1 , lng: + cord2 },
-      zoom: 8
+      zoom: 16
     });
   };
 
