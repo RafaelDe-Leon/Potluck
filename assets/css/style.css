@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     overflow-x: hidden;
     height: 100%;
 }
@@ -7,7 +6,13 @@ body {
 body {
     background-color: rgba(230, 227, 227);
     background-size: cover;
-    
+}
+
+/* h2 style */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Catamaran;
+    font-weight: 800;
 }
 
 /* Main image for the zipcode area */
@@ -24,7 +29,6 @@ body {
 .fixed-top {
     background-color: rgba(61, 61, 61, 0.856);
 }
-
 
 .area-two {
     background-color: rgba(230, 227, 227);
@@ -45,7 +49,7 @@ body {
 /* controls margin of the page */
 
 .margin-control {
-    margin: 50px auto;
+    margin: 25px auto;
 }
 
 .margin-control-zip {
@@ -56,21 +60,23 @@ body {
 
 #main-search-area {
     background-color: rgba(190, 190, 190, 0.829);
-    margin-top: 200px;
+    margin-top: 100px;
+    padding: 100px;
 }
 
 .color-main {
     color: blue;
+    font-size: 40px;
 }
 
 /* column one added CSS */
 
 .column-one {
     overflow: auto;
-    margin-left: 20px;
+    margin-left: 60px;
     margin-bottom: 50px;
     text-align: left;
-    width: 500px;
+    width: 525px;
     height: 800px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgba(0, 0, 0, 0.308);
@@ -129,6 +135,19 @@ body {
     /* border: 1px solid black; */
 }
 
+/* third section */
+
+.third-section {
+    background-image: url("../images/03.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* opacity: */
+    width: 100%;
+    height: 800px;
+    z-index: -1;
+}
+
 /* main top h tags style */
 
 .main-color-yellow {
@@ -137,8 +156,9 @@ body {
 
 .bar-control {
     width: 350px;
+    height: 40px;
 }
 
 .footer-style {
-background-color: black;
+    background-color: black;
 }

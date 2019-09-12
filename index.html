@@ -19,10 +19,12 @@
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
     rel="stylesheet">
+  <!-- main h1 font -->
+  <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
 
 
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="./Landing Page/scss/one-page-wonder.scss">
+  <link rel="stylesheet" href="./Landing Page/css/one-page-wonder.min.css">
 
   <!-- Stylesheet CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -74,9 +76,13 @@
 
 
             <!-- main entry point to our app -->
-            <input type="text" class="text-center bar-control" id="inputZip" placeholder="Enter Zipcode"
-              aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
-            </input>
+
+
+            <form id="zipForm">
+              <input type="text" class="text-center bar-control rounded-pill" id="inputZip" placeholder="Enter Zipcode"
+                aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
+              </input>
+            </form>
           </div>
         </div>
       </section>
@@ -92,8 +98,8 @@
       <!-- restaurant API -->
       <div id="restaurant">
 
-        
-        <h2 class="column-header">Restaurant near you</h2>
+
+        <h2 class="column-header">Trending Restaurants near you</h2>
         <ul>
           <li>
             <!-- temporary code for styling only will delete when restaurant API is added -->
@@ -102,7 +108,8 @@
               iure laboriosam, alias
               distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
               maxime possimus est dicta quo.</p>
-            <button class="btn btn-primary news-button"> News</button>
+            <button class="btn btn-primary news-button button-color" id="news"> News <i
+                class="fas fa-search"></i></button>
           </li>
           <li>
             <!-- temporary code for styling only will delete when restaurant API is added -->
@@ -111,7 +118,7 @@
               iure laboriosam, alias
               distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
               maxime possimus est dicta quo.</p>
-            <button class="btn btn-primary news-button"> News</button>
+            <button class="btn btn-primary news-button"> News <i class="fas fa-search"></i></button>
 
           </li>
           <li>
@@ -121,7 +128,7 @@
               iure laboriosam, alias
               distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
               maxime possimus est dicta quo.</p>
-            <button class="btn btn-primary news-button"> News</button>
+            <button class="btn btn-primary news-button"> News <i class="fas fa-search"></i></button>
 
           </li>
 
@@ -137,12 +144,15 @@
     </div>
 
     </div>
-    <div class="row">
-      <div class="map-container">
-        <div id="map" class="col-md-6">
-        </div>
-      </div>
 
+
+    <section id="third-section">
+      <div class="row">
+        <div id="map-container">
+          <div id="map" class="col-md-12">
+          </div>
+        </div>
+    </section>
 
     </div>
 
@@ -166,9 +176,10 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/df477e0c23.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -176,7 +187,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-
+  <!-- map -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0&callback=initMap">
     </script>
