@@ -6,6 +6,8 @@ $.ajaxPrefilter(function(options) {
 
 //global variable to hold map
 let idPressed = $("#column-one");
+let currentLat = "";
+let currentLan = "";
 var currentZipCode = "";
 let map;
 let mapApiKey = "AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0";
@@ -41,6 +43,7 @@ $("#inputZip").change(function() {
   console.log(currentZipCode, "zip code");
 });
 
+// on submit do this
 $("#zipForm").submit(function(event) {
   event.preventDefault();
   // console.log();
@@ -49,6 +52,8 @@ $("#zipForm").submit(function(event) {
   }
 
   console.log("Zipcode Input was pressed");
+
+  // adds class to the IDs
   $("#imageAreaTwo").addClass("area-two");
   $("#column-one").addClass("column-one");
 
@@ -66,8 +71,12 @@ $("#zipForm").submit(function(event) {
     console.log(response.lat);
     console.log(response.lng);
 
-    let lat = response.lat;
-    let lng = response.lng;
+    var lat = response.lat;
+    var lng = response.lng;
+
+    currentLat = lat;
+    currentLan = lng;
+    initMap (lat , lng);
   });
 });
 // document.getElementById("zipForm");
@@ -80,25 +89,16 @@ $("#zipForm").submit(function(event) {
 // };
 
 $(document).on("click", ".news-button", function() {
-
-
   $("#map-container").html("<div id='map' class=`col-md-6`></div>");
-
 });
 
 // function that ignites the map
-function initMap() {
-  // ajax call
-  $.ajax({
-    url: mapUrl,
-    method: "GET"
-  }).then(function(response) {
+function initMap(cord1 , cord2) {
     map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: 40.758614, lng: -73.967704 },
+      center: { lat: + cord1 , lng: + cord2 },
       zoom: 8
     });
-  });
-}
+  };
 
 // zipcode to lang convert API
 
