@@ -1,68 +1,77 @@
-console.log("start of restaurant.js");
-
-
-// //  create a keypress method for the enter key
-// $("#inputZip.form-control").keypress(function (event) {
-//   let key = event.keyCode;
-//   if (key === 13) {
-//     console.log("ENTER");
-//   }
-// })
-
+console.log("restaurant.js");
 
 let gKey = "AIzaSyBoVzLUOoUz5fBh-BmIDHhn8vhwVFMhMtI";
 let zKey = "69e9f092ab51bf6c870b9892ace15ab6";
 
+let letsEat = function () {
+  // get google API 
+  // replace ln 26-29 with google maps
+  // extract long/lat
+  // use long/lat in Zomato query
 
-// get google API 
-// replace ln 26-29 with google maps
-// extract long/lat
-// use long/lat in Zomato query
+  //  create a keypress method for the enter key
+  $("#inputZip").keypress(function (event) {
+    let key = event.keyCode;
+    if (key === 13) {
+      console.log("ENTER");
+      let zipCode = $("#inputZip").val();
+      let gURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=" + gKey;
+      console.log(gURL);
 
-//  create a keypress method for the enter key
-$("#inputZip").keypress(function (event) {
-  let key = event.keyCode;
-  if (key === 13) {
-    console.log("ENTER");
-    let zipCode = $("#inputZip").val();
-    let gURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=" + gKey;
-    console.log(gURL);
-
-    // use ajax function in google locations to get zipcode
-    $.ajax({
-      url: gURL,
-      method: "GET",
-    }).then(function (response) {
-      console.log(response);
-      let latID = response.results[0].geometry.location.lat;
-      console.log(latID);
-      let longID = response.results[0].geometry.location.lng;
-      console.log(longID);
-      let zURL = "https://developers.zomato.com/api/v2.1/search?entity_type=city&lat=" + latID + "&lon=" + longID + "&sort=real_distance&order=desc";
+      // use ajax function in google locations to get zipcode
       $.ajax({
-        url: zURL,
+        url: gURL,
         method: "GET",
-        headers: {
-          'user-key': zKey
-        }
-      }).then(function (eateries) {
-        console.log(eateries);
-        for (let k = 0; k < 20; k++) {
-          let rInfo = [
-            eateries.restaurants[k].restaurant.name,
-            eateries.restaurants[k].restaurant.location.address,
-            eateries.restaurants[k].restaurant.phone_numbers,
-            "Specializes in " + eateries.restaurants[k].restaurant.establishment[0],
-          ];
+      }).then(function (response) {
+        console.log(response);
+        let latID = response.results[0].geometry.location.lat;
+        console.log(latID);
+        let longID = response.results[0].geometry.location.lng;
+        console.log(longID);
+        let zURL = "https://developers.zomato.com/api/v2.1/search?entity_type=city&lat=" + latID + "&lon=" + longID + "&sort=real_distance&order=desc";
+        $.ajax({
+          url: zURL,
+          method: "GET",
+          headers: {
+            'user-key': zKey
+          }
+        }).then(function (eateries) {
+          console.log(eateries);
+          for (let k = 0; k < 15; k++) {
+            // grab restaurant div by id
+            // append rInfo to #restaurant
 
-          $("#restaurant").append(eateries[0].restaurant.name);
-          
-        };
-      });
-    });
-  };
-})
-        // grab restaurant div by id
+            // create eats variable for restaurant array
+            let eats = eateries.restaurants[k];
+            // create a variable to store incremental value 
+            let eatsCount = k + 1;
+            // create a name variable for restaurants
+            let name = eateries.restaurants[k].restaurant.name;
+            // create an address variable for restaurants
+            let address = eateries.restaurants[k].restaurant.location.address;
+            // create a phone variable for restaurants
+            let phone = "Phone: " + eateries.restaurants[k].restaurant.phone_numbers;
+            // console.log(phone)
+            // $(".title-style").append(name);
+            // $(".paragraph-style").append(address, phone)
+            // creating list group
+            let eatsList = $("<h3>");
+            eatsList.addClass("list-group");
+            $("#listing").append(eatsList);
 
+            // Log and append titles, addresses, and phone information to eatsList
+            let $eatsListItem = $("class='list-group-item'>");
 
-      //   // append rInfo to #restaurant
+            if (name) {
+              console.log(name);
+              $eatsListItem.append(
+                "<h3 class='title-style'>" + name + "</h3>" + "<p class='paragraph-style'>" + address + "</p >" + "<p class='paragraph-style'>" + phone + "</p>" + "<button class='btn btn-primary news-button'> News </button>"
+              )
+            }
+          }
+        })
+      })
+    }
+  })
+}
+letsEat();

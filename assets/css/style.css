@@ -1,6 +1,13 @@
+html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
 body {
     background-color: rgba(230, 227, 227);
     background-size: cover;
+    
 }
 
 /* Main image for the zipcode area */
@@ -15,8 +22,9 @@ body {
 }
 
 .fixed-top {
-    background-color: rgba(61, 61, 61, 0.658);
+    background-color: rgba(61, 61, 61, 0.856);
 }
+
 
 .area-two {
     background-color: rgba(230, 227, 227);
@@ -112,10 +120,13 @@ body {
 }
 
 .map-container {
+    margin-top: 50px;
     margin-left: 300px;
     margin-bottom: 50px;
+    margin-right: 200px;
     width: 100%;
     height: 600px;
+    /* border: 1px solid black; */
 }
 
 /* main top h tags style */
@@ -127,3 +138,10 @@ body {
 .bar-control {
     width: 350px;
 }
+<<<<<<< HEAD
+=======
+
+.footer-style {
+background-color: black;
+}
+>>>>>>> e21c01c31dd525d8bb73b8d281e8cac14751d92e

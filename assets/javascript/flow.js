@@ -17,4 +17,3 @@ input.addEventListener("keydown", function(event) {
     idPressed.append("<ul> Test </ul>");
   }
 });
-
