@@ -38,9 +38,6 @@ let letsEat = function () {
         }).then(function (eateries) {
           console.log(eateries);
           for (let k = 0; k < 15; k++) {
-            // grab restaurant div by id
-            // append rInfo to #restaurant
-
             // create eats variable for restaurant array
             let eats = eateries.restaurants[k];
             // create a variable to store incremental value 
@@ -52,22 +49,9 @@ let letsEat = function () {
             // create a phone variable for restaurants
             let phone = "Phone: " + eateries.restaurants[k].restaurant.phone_numbers;
             // console.log(phone)
-            // $(".title-style").append(name);
-            // $(".paragraph-style").append(address, phone)
-            // creating list group
-            let eatsList = $("<h3>");
-            eatsList.addClass("list-group");
-            $("#listing").append(eatsList);
+            let listings = $("#listings");
+            listings.append("<h3>" + name + "</h3>" + "<p>" + address + "</p>" + "<p>" + phone + "</p>");
 
-            // Log and append titles, addresses, and phone information to eatsList
-            let $eatsListItem = $("class='list-group-item'>");
-
-            if (name) {
-              console.log(name);
-              $eatsListItem.append(
-                "<h3 class='title-style'>" + name + "</h3>" + "<p class='paragraph-style'>" + address + "</p >" + "<p class='paragraph-style'>" + phone + "</p>" + "<button class='btn btn-primary news-button'> News </button>"
-              )
-            }
           }
         })
       })
