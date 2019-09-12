@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     overflow-x: hidden;
     height: 100%;
 }
@@ -7,7 +6,12 @@ body {
 body {
     background-color: rgba(230, 227, 227);
     background-size: cover;
-    
+}
+
+/* h2 style */
+
+h2 {
+    font-family: 'Cairo', sans-serif;
 }
 
 /* Main image for the zipcode area */
@@ -24,7 +28,6 @@ body {
 .fixed-top {
     background-color: rgba(61, 61, 61, 0.856);
 }
-
 
 .area-two {
     background-color: rgba(230, 227, 227);
@@ -68,10 +71,10 @@ body {
 
 .column-one {
     overflow: auto;
-    margin-left: 20px;
+    margin-left: 60px;
     margin-bottom: 50px;
     text-align: left;
-    width: 500px;
+    width: 525px;
     height: 800px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgba(0, 0, 0, 0.308);
@@ -142,5 +145,5 @@ body {
 }
 
 .footer-style {
-background-color: black;
+    background-color: black;
 }
