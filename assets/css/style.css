@@ -89,6 +89,17 @@ body {
     position: relative;
 }
 
+/* button color */
+
+.button-color {
+   border: solid black;
+    background-color: darkgrey;
+}
+
+.button-color:hover {
+    background: lightgrey;
+}
+
 /* list css control */
 
 .title-style {
