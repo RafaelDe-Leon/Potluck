@@ -61,6 +61,7 @@ body {
 
 .color-main {
     color: blue;
+    font-size: 40px;
 }
 
 /* column one added CSS */
@@ -87,17 +88,6 @@ body {
     font-size: 16px;
     margin-left: 10px;
     position: relative;
-}
-
-/* button color */
-
-.button-color {
-   border: solid black;
-    background-color: darkgrey;
-}
-
-.button-color:hover {
-    background: lightgrey;
 }
 
 /* list css control */
@@ -148,6 +138,7 @@ body {
 
 .bar-control {
     width: 350px;
+    height: 40px;
 }
 
 .footer-style {

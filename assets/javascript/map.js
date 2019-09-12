@@ -77,6 +77,8 @@ function initMap() {
   });
 }
 
+initMap();
+
 // zipcode to lang convert API
 
 // https://www.zipcodeapi.com/rest/<api_key>/info.<format>/<zip_code>/<units>
