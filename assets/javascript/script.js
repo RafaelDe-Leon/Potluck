@@ -7,21 +7,27 @@ $("#submit-name").on("click", function(event) {
   $('response').append('<div></div>', {
 
   })
+});
+    $("#newsButton").on("click", function(event) {
+      var restaurantName = $(this).val();
+      console.log("Button Clicked: "+restaurantName);
+      // Create a div within the response block to show news results
+          $('#response').append('<div></div>');
+          $('response').append('<div></div>');
+          $("div").attr("id","column-two");
+         
+      });
 
   
   // Get the input values
-  var restaurantName = $("#restaurantName")
-    .val()
-    .trim();
-    var restaurantCity = $("#restaurantCity")
-    .val()
-    .trim();
+
+  
   var url =
     "https://newsapi.org/v2/everything?" +
     "q=" +
-    restaurantName + " " + restaurantCity +
+    restaurantName + " restaurant" +
     "&language=en&" +
-    "sortBy=popularity&" +
+    "sortBy=publishedAt&" +
     "apiKey=bfc8e374d6df45af85688db28a5bf373";
 
   console.log(url);
@@ -32,7 +38,7 @@ $("#submit-name").on("click", function(event) {
   $.get(url).done(function(response) {
     // console.log(response.articles);
     updatePage(response.articles);
-  });
+
 
   // var twitter = 'https://api.twitter.com/1.1/search/tweets.json?q=' +
   //  restaurantName ;
@@ -56,7 +62,7 @@ $("#submit-name").on("click", function(event) {
 
     // Log the News API data to console, where it will show up as an object
 
-    for (var i = 0; i < numArticles; i++) {
+    for (var i = 0; i < 15; i++) {
       // Get specific article info for current index
       var article = articles[i];
 
@@ -75,23 +81,32 @@ $("#submit-name").on("click", function(event) {
       if (headline) {
         console.log(headline);
         $articleListItem.append(
-          "<span class='label label-primary'>" +
+          "<span class='label label-primary'>" + 
             articleCount +
             "</span>" +
-            "<strong> " +
+            "<h3 class='title-style'>" +
+            "<a>"
             headline +
-            "</strong>"
+            "</a></h3>"
         );
+        $("a").attr("href", article.url);
       }
+      // format date 
+      function formatDate(pubDate) {
+        console.log(moment(pubDate).format('dddd MMM Do, YYYY'));
+        return(moment(pubDate).format('dddd MMM Do, YYYY'));
+        }
 
       // If the article has a byline, log and append to $articleList
       var byline = article.author;
 
       // Log published date, and append to document if exists
       var pubDate = article.publishedAt;
+      
       console.log(article.publishedAt);
       if (pubDate) {
-        $articleListItem.append("<h5>" + article.publishedAt + "</h5>");
+        formatDate(pubDate);
+        $articleListItem.append("<h5>" + formatDate(pubDate) + "</h5>");
       }
 
       // Append and log url
