@@ -14,6 +14,11 @@
 
 
 
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet">
+
 
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -23,45 +28,53 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
 
 
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="./Landing Page/scss/one-page-wonder.scss">
+
+    <!-- Stylesheet CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="./Landing Page/css/one-page-wonder.min.css">
 
-  <!-- Stylesheet CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
 
-  <title>PotLuck</title>
+    <title>PotLuck</title>
 
 </head>
 
 <body>
-  <div class="image-one">
 
-    <!-- start of Nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="../Potluck/index.html">Potluck</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="../Potluck/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Landing Page/index.html">About us</a>
-            </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Future Features</a>
-            </li>
-          </ul>
-        </div>
+</body>
+<div class="image-one">
+
+  <!-- start of Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+
+
+    <div class="container">
+      <a class="navbar-brand" href="../Potluck/index.html">Potluck</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="../Potluck/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Landing Page/index.html">About us</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="futurefeature.html">Future Features</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-
+  <div class="image-one"> 
     <!-- container holding the entire website  -->
     <div class="container">
       <section id="main-search-area">
@@ -79,7 +92,7 @@
 
 
             <form id="zipForm">
-              <input type="text" class="text-center bar-control rounded-pill" id="inputZip" placeholder="Enter Zipcode"
+              <input type="text" class="text-center bar-control rounded-pill  button-color btn-xl" id="inputZip" placeholder="Enter Zipcode"
                 aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
               </input>
             </form>
@@ -129,22 +142,30 @@
               distinctio debitis! Praesentium adipisci consectetur, optio accusantium, nobis quos illo eligendi ab
               maxime possimus est dicta quo.</p>
             <button class="btn btn-primary news-button"> News <i class="fas fa-search"></i></button>
-
           </li>
-
-          <!-- temporary code for styling only will delete when restaurant API is added -->
-
+          <li class="nav-item">
+            <a class="nav-link" href="#">Future Features</a>
+          </li>
         </ul>
-
-      </div>
-      <!-- Div parent to JQuery response functions where 'Restaurant', 'News' and 'Twitter' boxes will be created -->
-      <div id="response">
-
       </div>
     </div>
+  </nav>
 
-    </div>
 
+
+  <!-- container holding the entire website  -->
+  <div class="container">
+    <section id="main-search-area">
+      <div class="row">
+        <h2 class="text-center margin-control color-main">Let's Start in Your <span
+            class="main-color-yellow">Neighborhood</span></h2>
+      </div>
+
+
+      <div class="row">
+
+
+                     <div class="margin-control col-md-12 text-center"></div>
 
     <section id="third-section">
       <div class="row">
@@ -156,23 +177,48 @@
 
     </div>
 
-    <!-- ======= -->
 
 
-  </section>
+          <!-- main entry point to our app -->
+          <input type="text" class="text-center bar-control" id="inputZip" placeholder="Enter Zipcode"
+            aria-label="Enter Zipcode Here" aria-describedby="basic-addon">
+          </input>
+        </div>
+      </div>
+    </section>
 
+  </div>
 
-  <!-- footer of the page -->
-  <footer class="py-5 bg-black footer-style">
-    <div class="container">
-      <p class="m-0 text-center text-white small">Copyright &copy; Potluck 2019</p>
+</div>
+
+<section id="imageAreaTwo">
+
+  <!-- column to be added the first information -->
+  <div id="column-one">
+    <!-- restaurant API -->
+    <div id="restaurant">
+      <h2 class="column-header">Restaurant near you</h2>
+      <div id="listings">
+        <h3></h3>
+        <p></p>
+        <button class="btn btn-primary news-button"> News </button>
+      </div>
     </div>
-    <!-- /.container -->
-  </footer>
+    <!-- Div parent to JQuery response functions where 'Restaurant', 'News' and 'Twitter' boxes will be created
+    <div id="response">
 
-  </footer>
+    </div>
+  </div>
+
+  </div>
+  <div class="row">
+    <div class="map-container">
+      <div id="map" class="col-md-6">
+      </div>
+    </div>
 
 
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -193,10 +239,34 @@
     </script>
 
 
-  <script src="assets/javascript/flow.js"></script>
-  <script src="assets/javascript/script.js"></script>
-  <script src="assets/javascript/restaurant.js"></script>
-  <script src="assets/javascript/map.js"></script>
-</body>
+
+<!-- footer of the page -->
+<footer class="py-5 bg-black footer-style">
+  <div class="container">
+    <p class="m-0 text-center text-white small">Copyright &copy; Potluck 2019</p>
+  </div>
+  <!-- That is really creative bro: Potluck 2019. Nice! -->
+  <!-- /.container -->
+</footer>
+
+</footer>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0&callback=initMap">
+  </script>
+<script src="assets/javascript/restaurant.js"></script>
+<script src="assets/javascript/script.js"></script>
+<script src="assets/javascript/map.js"></script>
+<!-- <script src="assets/javascript/flow.js"></script> -->
 
 </html>

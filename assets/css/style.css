@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-one {
     background-image: url("../images/potLuck2.jpg");
+    /* opacity: 0.2; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -59,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 /* main search bar CSS */
 
 #main-search-area {
-    background-color: rgba(190, 190, 190, 0.829);
+    background-color: rgb(90, 139, 212, 0.97);
     margin-top: 100px;
     padding: 100px;
 }
@@ -138,14 +139,15 @@ h1, h2, h3, h4, h5, h6 {
 /* third section */
 
 .third-section {
-    background-image: url("../images/03.jpg");
+    background-color: rgb(255, 255, 255);
+    /* background-image: url("../images/03.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; */
     /* opacity: */
     width: 100%;
     height: 800px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 /* main top h tags style */
@@ -159,6 +161,13 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
 }
 
+
 .footer-style {
-    background-color: black;
+background-color: black;
 }
+
+
+    background-color: black;
+    
+}
+

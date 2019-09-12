@@ -59,6 +59,7 @@ $("#zipForm").submit(function(event) {
   $("#third-section").addClass("third-section");
   $("#map-container").addClass("map-container");
 
+
   // may need later for future code
   // idPressed.append("<div class='row'>");
   // idPressed.append("<div class='col-md-4'");
