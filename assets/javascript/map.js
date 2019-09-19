@@ -60,6 +60,7 @@ $("#zipForm").submit(function(event) {
   $("#map-container").addClass("map-container");
   $("#column-header").addClass("column-header");
   $("#column-header").html("Trending Restaurants near you");
+  $("#news-button").addClass("news-button");
 
 
   // may need later for future code

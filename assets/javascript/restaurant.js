@@ -51,7 +51,7 @@ let letsEat = function () {
             // console.log(phone)
             let listings = $("#restaurant");
             listings.append("<h3>" + name + "</h3>" + "<p>" + address + "</p>" + "<p>" + phone + "</p>");
-            // listings.append("<button class='news-button>");
+           
           
 
           }
