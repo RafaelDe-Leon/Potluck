@@ -1,33 +1,33 @@
 $.ajaxPrefilter(function(options) {
   if (options.crossDomain && $.support.cors) {
-    options.url = "https://cors-anywhere.herokuapp.com/" + options.url;
+    options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
   }
 });
 
 //global variable to hold map
-let idPressed = $("#column-one");
-let currentLat = "";
-let currentLan = "";
-var currentZipCode = "";
+let idPressed = $('#column-one');
+let currentLat = '';
+let currentLan = '';
+var currentZipCode = '';
 let map;
-let mapApiKey = "AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0";
+let mapApiKey = 'AIzaSyAM69XHYamrYzng19RSBBgUFIzDWmZ_6Y0';
 let mapUrl =
-  "https://maps.googleapis.com/maps/api/js?key=" +
+  'https://maps.googleapis.com/maps/api/js?key=' +
   mapApiKey +
-  "&callback=initMap";
+  '&callback=initMap';
 
 function buildZipCodeRequestURI(zipCode) {
   // zipcode key from converter
   let zipcodeKey =
-    "yJ2trlSNPpRXf9kpE7yo6JUn4z9BxJdvAMSK5XuJXn9my5Ksec22lfAMgZxpLNeM";
+    'yJ2trlSNPpRXf9kpE7yo6JUn4z9BxJdvAMSK5XuJXn9my5Ksec22lfAMgZxpLNeM';
 
   // url from zipcode converter
   let url =
-    "https://www.zipcodeapi.com/rest/" +
+    'https://www.zipcodeapi.com/rest/' +
     zipcodeKey +
-    "/info.json/" +
+    '/info.json/' +
     zipCode +
-    "/degrees";
+    '/degrees';
 
   return url;
 }
@@ -38,30 +38,29 @@ function buildZipCodeRequestURI(zipCode) {
 // };
 
 // stores when a change of zipcode is changed
-$("#inputZip").change(function() {
+$('#inputZip').change(function() {
   currentZipCode = $(this).val();
-  console.log(currentZipCode, "zip code");
+  console.log(currentZipCode, 'zip code');
 });
 
 // on submit do this
-$("#zipForm").submit(function(event) {
+$('#zipForm').submit(function(event) {
   event.preventDefault();
   // console.log();
   if (!currentZipCode) {
     return;
   }
 
-  console.log("Zipcode Input was pressed");
+  console.log('Zipcode Input was pressed');
 
   // adds class to the IDs
-  $("#imageAreaTwo").addClass("area-two");
-  $("#column-one").addClass("column-one");
-  $("#third-section").addClass("third-section");
-  $("#map-container").addClass("map-container");
-  $("#column-header").addClass("column-header");
-  $("#column-header").html("Trending Restaurants near you");
-  $("#news-button").addClass("news-button");
-
+  $('#imageAreaTwo').addClass('area-two');
+  $('#column-one').addClass('column-one');
+  $('#column-header').html('Trending Restaurants near you');
+  $('#third-section').addClass('third-section');
+  $('#map-container').addClass('map-container');
+  $('#column-header').addClass('column-header');
+  $('#news-button').addClass('news-button');
 
   // may need later for future code
   // idPressed.append("<div class='row'>");
@@ -72,7 +71,7 @@ $("#zipForm").submit(function(event) {
   // ajax call
   $.ajax({
     url: zipCodeUrl,
-    method: "GET"
+    method: 'GET'
   }).then(function(response) {
     console.log(response.lat);
     console.log(response.lng);
@@ -82,7 +81,7 @@ $("#zipForm").submit(function(event) {
 
     currentLat = lat;
     currentLan = lng;
-    initMap (lat , lng);
+    initMap(lat, lng);
   });
 });
 // document.getElementById("zipForm");
@@ -95,12 +94,12 @@ $("#zipForm").submit(function(event) {
 // };
 
 // function that ignites the map
-function initMap(cord1 , cord2) {
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: + cord1 , lng: + cord2 },
-      zoom: 16
-    });
-  };
+function initMap(cord1, cord2) {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: +cord1, lng: +cord2 },
+    zoom: 16
+  });
+}
 
 // zipcode to lang convert API
 

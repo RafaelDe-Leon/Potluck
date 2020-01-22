@@ -6,7 +6,7 @@ click (https://rafaelde-leon.github.io/Potluck/) to see the app.
 
 # Overview
 
-This app is a c
+The way this app works is the user will search an area code using a zipcode, the user will get a list of restaurants and be able to see news articles related to the restaurants.
 
 # Built Using
 * HTML5
