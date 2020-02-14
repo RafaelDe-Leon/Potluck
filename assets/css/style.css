@@ -60,14 +60,17 @@ h1, h2, h3, h4, h5, h6 {
 /* main search bar CSS */
 
 #main-search-area {
-    background-color: rgb(90, 139, 212, 0.97);
+    background-color: black;
     margin-top: 100px;
     padding: 100px;
+    opacity: 85%;
 }
 
 .color-main {
-    color: blue;
+    color: maroon;
     font-size: 40px;
+    opacity: 100%;
+    background: none
 }
 
 /* column one added CSS */

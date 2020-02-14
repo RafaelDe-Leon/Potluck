@@ -79,13 +79,13 @@ $("#submit-name").on("click", function(event) {
       var $articleListItem = $("<li class='list-group-item articleHeadline'>");
 
       if (headline) {
-        console.log(headline);
+        console.log("Headline",headline);
         $articleListItem.append(
           "<span class='label label-primary'>" + 
             articleCount +
             "</span>" +
             "<h3 class='title-style'>" +
-            "<a>"
+            "<a>" +
             headline +
             "</a></h3>"
         );
