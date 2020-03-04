@@ -1,17 +1,24 @@
-# PotLuck
+# Potluck - Find the best food and drink in your community
 
-This app is a project assigment for Columbia University Bootcamp.
+Potluck is an application to find the most talked about restaurants and bars in town. 
 
-click (https://rafaelde-leon.github.io/Potluck/) to see the app.
+Using social media and news API data, coupled with Zomato's restaurant database, PotLuck analyzes trends in social media and professional restaurant reviews, so you don't have to. Potluck can find the most positively talked about restaurants in your area from trusted reviews and unadultered social media commentary. 
 
-# Overview
+Potluck is designed to address waning trust in native review platforms by sourcing and parsing data from trusted reviews and free-flowing social media traffic.
 
-The way this app works is the user will search an area code using a zipcode, the user will get a list of restaurants and be able to see news articles related to the restaurants.
+Try Potluck today! (https://rafaelde-leon.github.io/Potluck/) 
 
-# Built Using
+# Using Potluck
+
+*Enter a zipcode to initiate a search. 
+*Restaurants will be displayed in descending order based on the volume of positive reviews published in news reports and on Twitter in the preceding 12 months.
+*Click on a restaurant to view more details.
+
+# Technologies Used
 * HTML5
-* CSS3
-* Bootstrap
-* jQuery
-* Ajax Call
-* API Calls
+* CSS3/Boostrap
+* JavaScript w/ jQuery
+* RESTful API Calls
+  * Zomato API
+  * NewsAPI
+  * Twitter Search API
